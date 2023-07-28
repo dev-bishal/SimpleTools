@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Helpful Tools - Color Picker</title>
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.4.0/css/all.css" />
+    <!-- <script defer src="https://cdn.tailwindcss.com"></script> -->
+    <link rel="stylesheet" href="../Assets/stylesheet.css">
+    <style>
+        .colorPicker {
+            margin: 20px auto;
+            width: 300px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .hueSlider,
+        .saturationSlider,
+        .lightnessSlider {
+            width: 100%;
+            margin-bottom: 10px;
+        }
+
+        .transition-fade {
+            transition: 0.4s;
+            opacity: 1;
+        }
+
+        html.is-animating .transition-fade {
+            opacity: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="w-full flex justify-center items-center flex-col">
+        <header
+            class="z-10 w-full flex justify-center items-center px-5 py-2 border-b-2 border-indigo-500 absolute top-0 left-0 text-white">
+            <div class="holder w-[1000px] flex justify-between items-center ">
+                <a href="/index.html">
+                    <h1>Helpful Tools</h1>
+                </a>
+            </div>
+        </header>
+        <section class="w-full flex justify-center items-center flex-col p-6 pt-20 bg-[#262626d9] text-white">
+
+            <h2 class="font-bold">Helpful Tools > Color Picker</h2>
+            <div class="holder w-full xl:w-[1000px] flex justify-center xl:justify-start items-center flex-wrap">
+                <!--Main Content Goes Here-->
+                <div class="colorPicker">
+                    <div class="colorBox h-[100px] w-full bg-[#ff0000] rounded-[5px] mb-3" id="colorBox"></div>
+                    <input type="range" min="0" max="360" value="204" class="hueSlider" id="hueSlider">
+                    <input type="range" min="0" max="100" value="100" class="saturationSlider" id="saturationSlider">
+                    <input type="range" min="0" max="100" value="40" class="lightnessSlider" id="lightnessSlider">
+                    <span class="flex gap-3 justify-center items-center">
+                        <i id="open_eyedropper"
+                            class="fa-solid fa-eye-dropper cursor-pointer border border-solid p-4 rounded-full hover:bg-slate-800"></i>
+                        <input type="text" class="hexInput w-full p-3 bg-[#222222] rounded-md" id="hexInput">
+                    </span>
+                </div>
+            </div>
+        </section>
+        <footer class="w-full bg-[#007acc] flex justify-center items-center text-white p-4">
+            <p class="w-full">Developed By Bishal Biswas.</p>
+        </footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

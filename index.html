@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Helpful Tools</title>
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.4.0/css/all.css" />
+    <!-- <script defer src="https://cdn.tailwindcss.com"></script> -->
+    <link rel="stylesheet" href="Assets/stylesheet.css">
+    <style>
+        .transition-fade {
+            transition: 0.4s;
+            opacity: 1;
+        }
+
+        html.is-animating .transition-fade {
+            opacity: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="w-full flex justify-center items-center flex-col">
+        <header
+            class="z-20 w-full flex justify-center items-center px-5 py-2 border-b-2 border-indigo-500 absolute top-0 left-0 text-white">
+            <div class="holder w-[1000px] flex justify-between items-center ">
+                <a href="">
+                    <h1>Helpful Tools</h1>
+                </a>
+                <!-- <nav>
+                    <ul class="flex justify-between items-center gap-5">
+                        <li>option 1</li>
+                        <li>option 1</li>
+                        <li>option 1</li>
+                        <li>option 1</li>
+                    </ul>
+                </nav> -->
+            </div>
+        </header>
+        <section class="w-full flex justify-center items-center flex-col p-6 pt-20 bg-[#262626d9] text-white">
+            <div class="holder w-full lg:w-[1000px] flex justify-center items-center flex-wrap mb-6">
+                <input type="text" placeholder="Search Tool by Name"
+                    class="w-11/12 sm:w-2/4 p-3 bg-[#222222] rounded-md">
+            </div>
+
+            <h2 class="font-bold">Featured Tools</h2>
+            <div id="Tools_Holder"
+                class="holder w-full xl:w-[1000px] flex justify-center xl:justify-start items-center flex-wrap">
+                <!--Main Content Goes Here-->
+                <!-- <a href="/Color-Picker"
+                    class="w-4/5 sm:w-5/12 lg:w-[31%] bg-[#363636] rounded-md text-cyan-50 p-5 m-2 md:m-6 lg:m-2">
+                    <span class="flex gap-3 items-center">
+                        <img src="https://cdn-icons-png.flaticon.com/512/719/719747.png" alt=""
+                            class="rounded-md h-12 w-12">
+                        <h2>Color Picker</h2>
+                    </span>
+                    <p class="mt-4">This tools allows you to generate hexagonal Code of color</p>
+                    <span class="rounded-md p-1 bg-[#007acc8a] text-[#add6f1] text-xs mt-1">Designing</span>
+                </a> -->
+            </div>
+        </section>
+        <footer class="w-full bg-[#007acc] flex justify-center items-center text-white p-4">
+            <p class="w-full">Developed By Bishal Biswas.</p>
+        </footer>
+    </div>
+    <script src="Assets/script.js"></script>
+    <script>
+        LoadTools();
+    </script>
+</body>
+
+</html>
