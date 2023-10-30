@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Helpful Tools - Color Picker</title>
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.4.0/css/all.css" />
+    <!-- <script defer src="https://cdn.tailwindcss.com"></script> -->
+    <link rel="stylesheet" href="../Assets/stylesheet.css">
+    <style>
+        .convertor-layout input[type=file] {
+            margin: 20px 0;
+        }
+
+        .convertor-layout img {
+            max-height: 100%;
+            max-width: 100%;
+            box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.75);
+        }
+
+        .convertor-layout .dropTarget {
+            position: relative;
+            border: 3px dashed silver;
+            flex-basis: auto;
+            flex-grow: 20;
+            min-height: 50vh;
+        }
+
+        .convertor-layout .dropTarget::before {
+            content: 'Drop files here';
+            color: silver;
+            font-size: 5vh;
+            height: 5vh;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
+            text-align: center;
+            pointer-events: none;
+            user-select: none;
+        }
+
+        .convertor-layout #previews>div {
+            box-sizing: border-box;
+            height: 240px;
+            width: 240px;
+            padding: 20px;
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            vertical-align: top;
+        }
+
+        .convertor-layout #previews>div>progress {
+            width: 80%;
+        }
+
+        .convertor-layout {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: stretch;
+            align-content: stretch;
+            min-height: calc(100vh - 10rem);  
+            width: 100%;
+        }
+
+        .uk-width-2-3\@l {
+            width: 100% !important;
+        }
+
+        .sidebar {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="w-full flex justify-center items-center flex-col">
+        <header
+            class="z-10 w-full flex justify-center items-center px-5 py-2 border-b-2 border-indigo-500 absolute top-0 left-0 text-white">
+            <div class="holder w-[1000px] flex justify-between items-center ">
+                <a href="/index.html">
+                    <h1>Helpful Tools</h1>
+                </a>
+            </div>
+        </header>
+        <section class="w-full flex justify-center items-center flex-col p-6 pt-20 bg-[#262626d9] text-white">
+
+            <h2 class="font-bold">Helpful Tools > Image to WEBP</h2>
+            <div class="holder w-full xl:w-[1000px] flex justify-center xl:justify-start items-center flex-wrap">
+                <!--Main Content Goes Here-->
+                <div class="convertor-layout">
+                    <div class="flex justify-center items-center gap-2">
+                        <input accept="image/*" multiple="" type="file" />
+                        <span title="Clear" class="flex cursor-pointer justify-center items-center rounded-full h-5 w-5">
+                            <i id="clearBtn" class="fa-solid fa-broom"></i>
+                        </span>
+                    </div>
+                    <div id="previews"></div>
+                    <div class="dropTarget"></div>
+                </div>
+            </div>
+        </section>
+        <footer class="w-full bg-[#007acc] flex justify-center items-center text-white p-4">
+            <p class="w-full">Developed By Bishal Biswas.</p>
+        </footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
